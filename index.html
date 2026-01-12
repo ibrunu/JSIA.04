@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras - Gestor Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+            <p class="subtitle">Uma ferramenta criada para Gerenciar seus itens de forma simples e eficiente</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <input type="text" id="itemInput" placeholder="Digite um item para adicionar...">
+                    <button id="addButton" onclick="adicionarItem()">
+                        <i class="fas fa-plus"></i> Adicionar
+                    </button>
+                </div>
+                
+                <div class="instructions">
+                    <p><i class="fas fa-info-circle"></i> Para remover ou atualizar, clique no item correspondente na lista abaixo</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-secondary" onclick="removerItem()">
+                    <i class="fas fa-trash"></i> Remover Item
+                </button>
+                <button class="btn-secondary" onclick="atualizarItem()">
+                    <i class="fas fa-edit"></i> Atualizar Item
+                </button>
+                <button class="btn-secondary" onclick="limparLista()">
+                    <i class="fas fa-broom"></i> Limpar Lista
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalItens">0</span>
+                    <span class="stat-label">Itens na lista</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="ultimaAtualizacao">-</span>
+                    <span class="stat-label">Última atualização</span>
+                </div>
+            </div>
+
+            <div class="list-section">
+                <h2><i class="fas fa-list-check"></i> Itens da Lista</h2>
+                <div id="resultado" class="lista-itens">
+                    <p class="lista-vazia">Lista vazia. Adicione alguns itens para começar!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Lista de Compras</strong> — Ferramenta de gestão pessoal</p>
+            <p>Desenvolvido por ibruno © 2024 • <span id="currentYear"></span></p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-code"></i> GitHub</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contato</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
